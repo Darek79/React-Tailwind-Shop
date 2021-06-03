@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Generic",
+    "\\src\\components\\Navbar"
+  ],
+  "SelectedNode": "\\src\\components\\Navbar\\NavBarItemsDesktop.tsx",
+  "PreviewInSolutionExplorer": false
+}

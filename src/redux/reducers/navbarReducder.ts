@@ -1,23 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {createSlice} from "@reduxjs/toolkit";
 
-interface NavbarState{
-  open:boolean
+interface NavbarState {
+  open: boolean;
+}
+
+const initialState: NavbarState = {
+  open: false,
 };
 
-const initialState:NavbarState={
-  open:false
-};
-
-export const navbarSlice=createSlice({
-  name:'navbar',
+export const navbarSlice = createSlice({
+  name: "navbar",
   initialState,
-  reducers:{
-    openModal:state=>{
-      !state.open
-    }
-  }
+  reducers: {
+    openModal: (state) => {
+      state.open = !state.open;
+    },
+  },
 });
 
-export const {openModal}=navbarSlice.actions;
+export const {openModal} = navbarSlice.actions;
 
 export default navbarSlice.reducer;

@@ -1,18 +1,13 @@
 import {classes} from "./../../Utils/classesCreator";
-
-interface CompProps {
-  default_style?: string;
-  custom_style?: string;
-  children?: React.ReactNode;
-}
+import {Generic} from "./../../Interfaces/Interfaces";
 
 export default function GenericWrapper({
-  default_style = "",
-  custom_style = "",
+  parent_style = "",
+  child_style = "",
   children,
-}: CompProps): JSX.Element {
+}: Generic): JSX.Element {
   return (
-    <div className={classes(default_style, custom_style)}>
+    <div className={classes(parent_style, child_style)}>
       {children}
     </div>
   );

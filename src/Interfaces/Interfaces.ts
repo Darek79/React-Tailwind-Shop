@@ -12,3 +12,15 @@ export interface SVG {
   wrapper_class?: string;
   fnClick?: () => void;
 }
+
+export interface Generic {
+  default_style?: string;
+  custom_style?: string;
+  parent_style?: string;
+  child_style?: string;
+  children?: React.ReactNode;
+  path?: string;
+  content?: string;
+  fnClick?: () => void;
+  state?: any;
+}
