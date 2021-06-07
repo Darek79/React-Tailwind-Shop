@@ -1,5 +1,5 @@
-import {classes} from "./../../Utils/classesCreator";
-import {Generic} from "./../../Interfaces/Interfaces";
+import {classes} from "../../Utils/classesCreator";
+import {Generic} from "../../Interfaces/Interfaces";
 
 export default function GenericWrapper({
   parent_style = "",

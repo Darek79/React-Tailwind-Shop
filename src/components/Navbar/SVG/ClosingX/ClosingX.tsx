@@ -1,34 +1,36 @@
-import {SVG} from "./../../../Interfaces/Interfaces";
+import {SVG} from "./../../../../Interfaces/Interfaces";
 
-export default function Cart({
-  strokeWidth = "4",
+export default function ClosingX({
+  strokeWidth = "1",
   fill,
   stroke = "#707070",
   line_class,
   svg_class,
+  fnClick,
 }: SVG): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 36.722 37.665"
+      viewBox="-2 -2 35.414 35.414"
       className={svg_class}
+      onClick={fnClick}
     >
       <path
         className={line_class}
         fill={fill}
         stroke={stroke}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         strokeWidth={strokeWidth}
-        d="M2 2h4.715l4.149 28.007H31.61l3.112-20.652H7.94L6.715 2z"
+        d="M.707.707l25 25"
       />
       <path
         className={line_class}
         fill={fill}
         stroke={stroke}
-        stroke-linecap="round"
+        strokeLinecap="round"
         strokeWidth={strokeWidth}
-        d="M29.835 35.665h-16.5"
+        d="M25.707.707l-25 25"
       />
     </svg>
   );

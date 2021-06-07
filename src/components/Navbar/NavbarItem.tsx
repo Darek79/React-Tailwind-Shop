@@ -1,33 +1,29 @@
-import {useState} from "react";
+import React, {
+  useState,
+  memo,
+  useRef,
+  ReactEventHandler,
+  useEffect,
+} from "react";
 import {NavLink} from "react-router-dom";
 import {Generic} from "./../../Interfaces/Interfaces";
-// import {
-//   useAppSelector,
-//   useAppDispatch,
-// } from "./../../redux/hooks";
-// import {openModal} from "./../../redux/reducers/navbarReducder";
+
 export default function NavBarItem({
-  parent_style = "",
-  child_style = "",
   path = "",
   content,
-  fnClick,
-  state,
 }: Generic): JSX.Element {
-  const [open, setOpen] = useState(false);
-
-  function modalOpen() {
-    setOpen(true);
-  }
   return (
-    <div className={parent_style}>
-      <NavLink exact to={path}>
-        <span className={child_style}>{content}</span>
-      </NavLink>
-      {console.log(open)}
-      <p className="text-light" onClick={modalOpen}>
-        test
-      </p>
-    </div>
+    <NavLink to={path}>
+      <div className="px-2 h-full inline-block">
+        <div className="w-full h-14 bg-dark group transition flex">
+          <p className="text-xs tracking-wide text-light px-2 m-auto">
+            {content}
+          </p>
+          <div className="w-full h-60 -top-60 right-0 bg-red-200 transition delay-500 duration-300 transform-gpu group-hover:block group-hover:opacity-100 group-hover:translate-y-74 group-hover:z-10 -z-10 absolute">
+            {content}
+          </div>
+        </div>
+      </div>
+    </NavLink>
   );
 }

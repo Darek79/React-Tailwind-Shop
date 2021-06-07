@@ -23,4 +23,5 @@ export interface Generic {
   content?: string;
   fnClick?: () => void;
   state?: any;
+  hover?: string;
 }
