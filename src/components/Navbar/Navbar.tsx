@@ -21,13 +21,15 @@ export default function Navbar(): JSX.Element {
         <Logo />
       </div>
       <div className="w-1/2 h-full opacity-0 lg:opacity-100 ">
-        {NavbarItemsArray.map((el) => (
-          <NavBarItem
-            key={el}
-            path={`/${el}`}
-            content={el}
-          />
-        ))}
+        <div className="w-full h-full hidden lg:block">
+          {NavbarItemsArray.map((el) => (
+            <NavBarItem
+              key={el}
+              path={`/${el}`}
+              content={el}
+            />
+          ))}
+        </div>
       </div>
       <div className=" w-1/2 h-full flex justify-end items-center px-2">
         <Lupe
@@ -41,7 +43,6 @@ export default function Navbar(): JSX.Element {
           stroke="#f7fff7"
           strokeWidth="3"
         />
-
         <Hamburger
           class_svg_default="mx-1 h-1/2 w-6  lg:hidden"
           stroke="#f7fff7"

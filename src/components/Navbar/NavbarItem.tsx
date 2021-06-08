@@ -19,7 +19,7 @@ export default function NavBarItem({
           <p className="text-xs tracking-wide text-light px-2 m-auto">
             {content}
           </p>
-          <div className="w-full h-60 -top-60 right-0 bg-red-200 transition delay-500 duration-300 transform-gpu group-hover:block group-hover:opacity-100 group-hover:translate-y-74 group-hover:z-10 -z-10 absolute">
+          <div className="w-full h-60 -top-60 opacity-0 right-0 bg-red-200 transition delay-500 duration-300 transform-gpu group-hover:block group-hover:opacity-100 group-hover:translate-y-74 group-hover:z-10 -z-10 absolute">
             {content}
           </div>
         </div>

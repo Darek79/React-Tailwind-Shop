@@ -1,6 +1,5 @@
 import {useState} from "react";
 import {SVG} from "./../../../../Interfaces/Interfaces";
-import ClosingX from "./../ClosingX/ClosingX";
 import {ModalOpener} from "./../../../../Hooks/ModalOpener";
 import SideBar from "./../../Sidebar/SidebarGeneric";
 export default function Lupe({
@@ -42,17 +41,11 @@ export default function Lupe({
           />
         </g>
       </svg>
-      <SideBar fnClick={modalAction} state={open} />
-      {/* <div className="absolute top-0 right-0 bg-light h-screen w-full">
-        <div className="w-full flex justify-end pr-2 pt-2">
-          <ClosingX
-            svg_class="w-8 h-8"
-            strokeWidth="3"
-            stroke="#0f181a"
-          />
-        </div>
-        test
-      </div> */}
+      <SideBar
+        fnClick={modalAction}
+        state={open}
+        sidebarOpenStyling="absolute top-0 right-0 bg-light h-96 w-full transform-gpu transition-all duration-500"
+      />
     </>
   );
 }
