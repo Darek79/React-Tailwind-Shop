@@ -9,12 +9,10 @@ module.exports = {
     minWidth: {
       "1/4": "25%",
       "1/2": "50%",
+      "3/5": "60%",
       "3/4": "75%",
       100: "300px",
       full: "100%",
-    },
-    fontSize: {
-      tiny: ".50rem",
     },
     container: {
       center: true,

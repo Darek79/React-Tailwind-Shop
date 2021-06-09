@@ -25,3 +25,7 @@ export interface Generic {
   state?: any;
   hover?: string;
 }
+
+export interface NavLinkI {
+  path?: string;
+}
