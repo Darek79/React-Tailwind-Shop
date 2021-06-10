@@ -1,4 +1,3 @@
-import {useState} from "react";
 import {SVG} from "./../../../../Interfaces/Interfaces";
 import {ModalOpener} from "./../../../../Hooks/ModalOpener";
 import SideBar from "./../../Sidebar/SidebarGeneric";

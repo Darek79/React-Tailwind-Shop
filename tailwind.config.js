@@ -21,25 +21,24 @@ module.exports = {
     fontFamily: {
       sans: ["Roboto", "Arial"],
     },
-    backgroundColor: (theme) => ({
-      ...theme("colors"),
-      light: "#f7fff7",
-      dark: "#0f181a",
-    }),
-    textColor: (theme) => ({
-      ...theme,
-      light: "#f7fff7",
-      dark: "#0f181a",
-    }),
-    borderColor: (theme) => ({
-      ...theme,
-      light: "#f7fff7",
-      dark: "#0f181a",
-    }),
-    minWidth: {
-      logo: "32rem",
-    },
     extend: {
+      backgroundColor: {
+        light: "#f7fff7",
+        dark: "#0f181a",
+        darkHover: "#253c41",
+      },
+      borderColor: {
+        light: "#f7fff7",
+        dark: "#0f181a",
+      },
+      textColor: {
+        light: "#f7fff7",
+        dark: "#0f181a",
+      },
+      width: {
+        70: "70%",
+        30: "30%",
+      },
       translate: {
         74: "18.5rem",
       },
@@ -60,6 +59,9 @@ module.exports = {
       inset: {
         per10: "10%",
         per20: "20%",
+      },
+      minWidth: {
+        logo: "32rem",
       },
     },
   },
