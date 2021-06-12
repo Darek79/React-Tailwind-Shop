@@ -15,7 +15,7 @@ const NavbarItemsArray: string[] = [
 
 export default function Navbar(): JSX.Element {
   return (
-    <section className="w-full h-14 bg-dark row-start-1 flex items-center">
+    <section className="z-50 w-full h-14 bg-dark col-start-2 xl:col-end-2 flex items-center">
       <div className="w-36 h-full px-2 flex ">
         <Logo />
       </div>

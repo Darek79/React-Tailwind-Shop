@@ -43,7 +43,7 @@ export default function Lupe({
       <SideBar
         fnClick={modalAction}
         state={open}
-        sidebarOpenStyling="absolute top-0 right-0 bg-light h-96 w-full transform-gpu transition-all duration-500"
+        sidebarOpenStyling=" absolute top-0 right-0 bg-light h-96 w-full transform-gpu transition-all duration-500"
       />
     </>
   );

@@ -12,8 +12,8 @@ export default function MainCard({
   imgLink,
 }: MainCardI): JSX.Element {
   return (
-    <section className="w-full col-start-1 col-end-2 bg-gray-300 h-full">
-      <div className=" w-screen h-full px-4 py-4 flex bg-red-200 flex-col-reverse lg:flex-row">
+    <section className="w-full col-start-2 xl:col-end-2 bg-gray-300 h-full">
+      <div className=" w-full h-full px-4 py-4 flex bg-red-200 flex-col-reverse lg:flex-row">
         <div className="lg:w-1/4 2xl:w-1/5 h-full flex flex-col lg:pt-20 p-1 lg:p-2 items-center lg:items-start">
           <p className="2xl:text-3xl lg:text-2xl text-xl text-light tracking-wide font-bold">
             {title}

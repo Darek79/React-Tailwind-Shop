@@ -50,8 +50,9 @@ module.exports = {
         dark: "0f181a",
       },
       gridTemplateColumns: {
-        mobile: "1fr",
-        desktop: "1fr",
+        mobile: "10px 1fr 10px",
+        desktop: "10% 1fr 10%",
+        xldesktop: "10% 1fr 10%",
       },
       gridTemplateRows: {
         default: "auto 1fr auto",
