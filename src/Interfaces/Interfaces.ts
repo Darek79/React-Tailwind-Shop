@@ -29,3 +29,11 @@ export interface Generic {
 export interface NavLinkI {
   path?: string;
 }
+export interface ImageCardI {
+  url?: string;
+  path?: string;
+  description?: string;
+  defaultStyle?: string;
+  wrapperStyle?: string;
+  position?: string;
+}

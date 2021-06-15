@@ -7,7 +7,7 @@ export default function GenericWrapper({
   children,
 }: Generic): JSX.Element {
   return (
-    <div className={classes(parent_style, child_style)}>
+    <div className={classes([parent_style, child_style])}>
       {children}
     </div>
   );

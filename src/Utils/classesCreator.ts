@@ -1,3 +1,3 @@
-export function classes(...args: string[]) {
+export function classes(args: string[]) {
   return [...args].join(" ");
 }

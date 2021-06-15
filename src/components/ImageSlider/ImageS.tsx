@@ -1,8 +1,8 @@
 import CSS from "csstype";
-import Debouncer from "./../../Hooks/DebouncerResize";
+import Debouncer from "../../Hooks/DebouncerResize";
 import {useState, useRef, useEffect} from "react";
-import ImageCard from "./../Cards/ImageCard/ImageCard";
-import Arrow from "./../Navbar/SVG/Arrow/Arrow";
+import ImageCard from "../Cards/ImageCard/ImageCard";
+import Arrow from "../Navbar/SVG/Arrow/Arrow";
 
 interface ImageSliderI {
   links?: string[];
@@ -22,7 +22,7 @@ const products = [
   "https://via.placeholder.com/400x400/999900?text=Image",
 ];
 
-export default function ImageSlider({
+export default function ImageS({
   links = products,
 }: ImageSliderI): JSX.Element {
   const params = Debouncer();
@@ -60,7 +60,7 @@ export default function ImageSlider({
     setMove((p) => p + params);
   }
   return (
-    <div className="relative col-start-2 xl:col-end-2 overflow-x-hidden">
+    <div className="relative col-start-2 xl:col-end-2">
       {!hideLeftArrow ? (
         <div
           className="absolute top-0 h-full z-10 w-14 flex justify-center items-center"

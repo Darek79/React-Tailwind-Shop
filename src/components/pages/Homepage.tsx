@@ -7,16 +7,12 @@ export default function Homepage(): JSX.Element {
     <div className="grid gap-y-4 w-screen grid-cols-mobile xl:grid-cols-desktop select-none overflow-x-hidden">
       <NavBar />
       <MainCard />
-      <div className="col-start-2 xl:col-end-2 w-full overflow-x-hidden">
-        <ImageSlider />
-      </div>
-      <SoloCard />
-      <div className="col-start-2 xl:col-end-2 w-full overflow-x-hidden">
-        <ImageSlider />
-      </div>
+      <ImageSlider />
+      <SoloCard position="items-start" />
+      <ImageSlider />
       <MainCard />
       <SoloCard position="items-start" />
-      <SoloCard />
+      <SoloCard position="items-start" />
     </div>
   );
 }

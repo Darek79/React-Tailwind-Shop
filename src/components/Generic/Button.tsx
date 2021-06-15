@@ -8,7 +8,7 @@ interface ButtonI extends NavLinkI {
 }
 
 const divClass1: string =
-  "w-2/5 transform-gpu translate-all hover:bg-darkHover bg-dark rounded-full py-1 px-4 mt-2";
+  "w-2/5 max-w-[10rem] transform-gpu translate-all hover:bg-darkHover bg-dark rounded-full py-1 px-4 mt-2";
 
 const textClass1: string =
   "text-lg w-full font-bold h-full text-light tracking-wide text-center";
@@ -17,13 +17,11 @@ export default function Button({
   divClass = divClass1,
   textClass = textClass1,
   path = "",
-  buttonText,
+  buttonText = "Shop",
 }: ButtonI): JSX.Element {
   return (
     <div className={divClass}>
-      <NavLink to={path}>
-        <p className={textClass}>{buttonText}</p>
-      </NavLink>
+      <p className={textClass}>{buttonText}</p>
     </div>
   );
 }
@@ -39,3 +37,8 @@ export default function Button({
 // ":hover": {
 //   backgroundColor: "#f7fff7",
 // },
+{
+  /* <NavLink to={path}>
+<p className={textClass}>{buttonText}</p>
+</NavLink> */
+}
