@@ -7,6 +7,8 @@ interface ImageCardI {
   path?: string;
   description?: string;
   descVisible?: boolean;
+  w?: string;
+  h?: string;
 }
 
 export default memo(function ImageCard({
@@ -14,6 +16,7 @@ export default memo(function ImageCard({
   path = "",
   description = "test",
   descVisible = true,
+  w,
 }: ImageCardI): JSX.Element {
   return (
     <section className="w-full h-full pl-1 pr-1 py-2 relative flex-shrink-0">
@@ -25,6 +28,7 @@ export default memo(function ImageCard({
             src={url}
           />
         </figure>
+        {/* <Image /> */}
         {descVisible ? (
           <div>
             <div className="flex justify-between mt-2">

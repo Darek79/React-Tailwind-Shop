@@ -8,6 +8,8 @@ interface ImageSliderI {
   links?: string[];
   w?: string;
   h?: string;
+  wrapperStyle?: string;
+  descVisible?: boolean;
 }
 
 const products = [
@@ -24,6 +26,8 @@ const products = [
 
 export default function ImageSlider({
   links = products,
+  wrapperStyle = "relative col-start-2 xl:col-end-2 overflow-x-hidden",
+  descVisible = false,
 }: ImageSliderI): JSX.Element {
   const params = Debouncer();
   const arrowClicksRef = useRef<number>(0);
@@ -60,7 +64,7 @@ export default function ImageSlider({
     setMove((p) => p + params);
   }
   return (
-    <div className="relative col-start-2 xl:col-end-2 overflow-x-hidden">
+    <div className={wrapperStyle}>
       {!hideLeftArrow ? (
         <div
           className="absolute top-0 h-full z-10 w-14 flex justify-center items-center"
