@@ -24,7 +24,7 @@ export default function Navbar(): JSX.Element {
           {NavbarItemsArray.map((el) => (
             <NavBarItem
               key={el}
-              path={`/${el}`}
+              path={`/category/${el}`}
               content={el}
             />
           ))}

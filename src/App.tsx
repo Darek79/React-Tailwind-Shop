@@ -6,6 +6,7 @@ import {
 
 import Homepage from "./components/pages/Homepage";
 import ProductPage from "./components/pages/ProductPage";
+import CategoryPage from "./components/pages/CategoryPage";
 import Test from "./components/pages/Test";
 
 function App() {
@@ -17,6 +18,11 @@ function App() {
           exact
           path="/product/:id"
           component={ProductPage}
+        />
+        <Route
+          exact
+          path="/category/:id"
+          component={CategoryPage}
         />
         <Route exact path="/test" component={Test} />
       </Switch>

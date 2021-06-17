@@ -15,7 +15,7 @@ const style: CSS.Properties = {
 
 export default function Image({
   srcSetSmall = "https://via.placeholder.com/400x400/999900?text=SMALL",
-  srcSetdefault = "https://via.placeholder.com/800x800/ff6666?text=BIG",
+  srcSetdefault = "https://via.placeholder.com/1000x1000/ff6666?text=BIG",
   imageStyling = "",
   wrapperStyling = "",
   alt = "Product",
