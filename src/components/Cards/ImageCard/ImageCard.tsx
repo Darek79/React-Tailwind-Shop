@@ -16,7 +16,6 @@ export default memo(function ImageCard({
   path = "",
   description = "test",
   descVisible = true,
-  w,
 }: ImageCardI): JSX.Element {
   return (
     <section className="w-full h-full pl-1 pr-1 py-2 relative flex-shrink-0">

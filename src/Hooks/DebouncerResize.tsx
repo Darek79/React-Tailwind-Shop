@@ -36,6 +36,7 @@ export default function Resize(): number {
     ? siteParams / 3
     : siteParams / 2;
 }
+
 // import {useEffect, useState} from "react";
 
 // export default function IsBreakpoint(): number {

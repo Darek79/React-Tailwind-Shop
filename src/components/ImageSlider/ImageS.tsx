@@ -10,7 +10,7 @@ interface ImageSliderI {
   h?: string;
   wrapperStyle?: string;
   descVisible?: boolean;
-  productPage?: boolean;
+  mobile?: boolean;
 }
 
 const products = [
@@ -29,9 +29,9 @@ export default function ImageS({
   links = products,
   wrapperStyle = "relative col-start-2 overflow-x-hidden",
   descVisible = false,
-  productPage,
 }: ImageSliderI): JSX.Element {
-  const params = Debouncer();
+  let params = Debouncer();
+  params = params < 27 ? params * 2 : params;
   const arrowClicksRef = useRef<number>(0);
   const [moved, setMove] = useState(0);
   const [hideLeftArrow, setHideLeftArrow] =
@@ -93,7 +93,7 @@ export default function ImageS({
           />
         </div>
       ) : undefined}
-
+      {console.log(params * 2, "2")}
       <div
         className="grid grid-flow-col bg-gray-200 auto-cols-max relative overflow-x-hidden transition-all ease-in duration-150 transform-gpu"
         style={{
@@ -108,13 +108,12 @@ export default function ImageS({
             <span
               key={i}
               style={{
-                width: `${params * 3}rem`,
+                width: `${params}rem`,
               }}
             >
               <ImageCard
                 url={el}
                 descVisible={descVisible}
-                w={`${params * 3}rem`}
               />
             </span>
           );

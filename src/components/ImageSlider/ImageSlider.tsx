@@ -1,4 +1,4 @@
-import CSS from "csstype";
+// import CSS from "csstype";
 import Debouncer from "./../../Hooks/DebouncerResize";
 import {useState, useRef, useEffect} from "react";
 import ImageCard from "./../Cards/ImageCard/ImageCard";
@@ -27,9 +27,10 @@ const products = [
 export default function ImageSlider({
   links = products,
   wrapperStyle = "relative col-start-2 xl:col-end-2 overflow-x-hidden",
-  descVisible = false,
+  descVisible = true,
 }: ImageSliderI): JSX.Element {
-  const params = Debouncer();
+  let params = Debouncer();
+  params = params < 27 ? params * 2 : params;
   const arrowClicksRef = useRef<number>(0);
   const [moved, setMove] = useState(0);
   const [hideLeftArrow, setHideLeftArrow] =
@@ -109,7 +110,10 @@ export default function ImageSlider({
                 width: `${params}rem`,
               }}
             >
-              <ImageCard url={el} />
+              <ImageCard
+                url={el}
+                descVisible={descVisible}
+              />
             </span>
           );
         })}
@@ -117,14 +121,4 @@ export default function ImageSlider({
     </div>
   );
 }
-{
-  /* <div
-        className="flex relative overflow-x-hidden transition-all ease-in duration-150 transform-gpu"
-        style={{
-          transform: `translateX(${moved}rem)`,
-          scrollSnapType: "x mandatory",
-          scrollBehavior: "smooth",
-          width: `${products.length * params}rem`,
-        }}
-      >*/
-}
+
