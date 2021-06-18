@@ -43,7 +43,7 @@ export default function Navbar(): JSX.Element {
           strokeWidth="3"
         />
         <Hamburger
-          class_svg_default="mx-1 h-1/2 w-6  lg:hidden"
+          class_svg_default="mx-1 h-1/2 w-6 lg:hidden"
           stroke="#f7fff7"
           strokeWidth="3"
         />

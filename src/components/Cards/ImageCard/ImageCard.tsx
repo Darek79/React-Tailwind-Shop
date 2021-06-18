@@ -5,6 +5,7 @@ import Image from "./../../Generic/Image";
 interface ImageCardI {
   url?: string;
   path?: string;
+  wrapperStyle?: string;
   description?: string;
   descVisible?: boolean;
   w?: string;
@@ -13,21 +14,15 @@ interface ImageCardI {
 
 export default memo(function ImageCard({
   url = "https://via.placeholder.com/400x400/999900?text=Image",
-  path = "",
+  path = "/product/1234",
   description = "test",
   descVisible = true,
+  wrapperStyle = "w-full h-full pl-1 pr-1 py-2 relative flex-shrink-0",
 }: ImageCardI): JSX.Element {
   return (
-    <section className="w-full h-full pl-1 pr-1 py-2 relative flex-shrink-0">
-      <NavLink to={`/${path}`}>
-        <figure>
-          <img
-            className="w-full h-full"
-            alt={description}
-            src={url}
-          />
-        </figure>
-        {/* <Image /> */}
+    <section className={wrapperStyle}>
+      <NavLink to={`${path}`}>
+        <Image />
         {descVisible ? (
           <div>
             <div className="flex justify-between mt-2">

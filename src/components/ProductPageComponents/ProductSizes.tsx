@@ -16,7 +16,7 @@ export default function ProductSizes({
         {Array(10)
           .fill(0)
           .map((el) => (
-            <div className="w-full py-2 px-4 border-2 text-center border-gray-100 rounded-md hover:border-gray-600 hover:cursor-pointer">
+            <div className="w-full py-2 px-4 border-2 text-center border-gray-200 rounded-md hover:border-gray-600 hover:cursor-pointer">
               S
             </div>
           ))}

@@ -1,5 +1,3 @@
-
-
 export const NavbarItemsArray: string[] = [
   "Women",
   "Men",

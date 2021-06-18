@@ -1,5 +1,4 @@
 import NavBar from "./../Navbar/Navbar";
-import Debouncer from "../../Hooks/DebouncerResize";
 import {useParams} from "react-router-dom";
 import ProductDescription from "../ProductPageComponents/ProductDescription";
 import ProductSizes from "../ProductPageComponents/ProductSizes";
@@ -8,8 +7,7 @@ import Image from "../Generic/Image";
 import ImageSlider from "./../ImageSlider/ImageSlider";
 import Button from "../Generic/Button";
 export default function ProductPage(): JSX.Element {
-  const params = Debouncer();
-  //const params = useParams<{id: string}>();
+  //const {id} = useParams<{id: string}>();
   return (
     <div className="grid gap-y-4 grid-cols-mobile xl:grid-cols-desktop select-none ">
       <NavBar />
