@@ -5,3 +5,5 @@ export const NavbarItemsArray: string[] = [
   "Collections",
   "Sale",
 ];
+
+export const siteCurrency: number = 36;

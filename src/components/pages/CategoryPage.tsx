@@ -1,4 +1,5 @@
 import NavBar from "./../Navbar/Navbar";
+import DivWrapper from "./../Generic/DIVWrapper";
 import {NavLink} from "react-router-dom";
 import {useParams} from "react-router-dom";
 import {NavbarItemsArray} from "../../SiteDefaults/NavbarItems";
@@ -10,7 +11,7 @@ import ImageCard from "../Cards/ImageCard/ImageCard";
 export default function CategoryPage(): JSX.Element {
   const {id} = useParams<{id: string}>();
   return (
-    <div className="grid gap-y-4 w-screen grid-cols-mobile xl:grid-cols-desktop select-none overflow-x-hidden">
+    <DivWrapper>
       <NavBar />
       <div className="col-start-2 flex md:hidden text-center gap-x-1">
         {NavbarItemsArray.map((el) => {
@@ -50,6 +51,6 @@ export default function CategoryPage(): JSX.Element {
         </div>
       </div>
       {console.log(id)}
-    </div>
+    </DivWrapper>
   );
 }

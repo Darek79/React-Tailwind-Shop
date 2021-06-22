@@ -1,15 +1,25 @@
 import NavBar from "./../Navbar/Navbar";
 import {useParams} from "react-router-dom";
+import {useAppDispatch} from "../../redux/hooks";
+import {addToBasket} from "../../redux/reducers/basketReducder";
+import DivWrapper from "./../Generic/DIVWrapper";
 import ProductDescription from "../ProductPageComponents/ProductDescription";
 import ProductSizes from "../ProductPageComponents/ProductSizes";
 import ProductShipping from "../ProductPageComponents/ProductShipping";
 import Image from "../Generic/Image";
 import ImageSlider from "./../ImageSlider/ImageSlider";
 import Button from "../Generic/Button";
+import React from "react";
 export default function ProductPage(): JSX.Element {
-  //const {id} = useParams<{id: string}>();
+  const {id} = useParams<{id: string}>();
+
+  const dispatch = useAppDispatch();
+
+  const basketAdder = () => {
+    dispatch(addToBasket(id));
+  };
   return (
-    <div className="grid gap-y-4 grid-cols-mobile xl:grid-cols-desktop select-none ">
+    <DivWrapper>
       <NavBar />
       <div className="w-full col-start-2 justify-center md:hidden">
         <ProductDescription />
@@ -32,6 +42,7 @@ export default function ProductPage(): JSX.Element {
             <Button
               buttonText="Add to Bag"
               customDivClass="w-full py-4 mb-2 hover:cursor-pointer"
+              fnClick={basketAdder}
             />
             <Button
               buttonText="Favorit"
@@ -49,6 +60,7 @@ export default function ProductPage(): JSX.Element {
                 <Button
                   buttonText="Add to Bag"
                   customDivClass="w-full py-4 mb-2 hover:cursor-pointer"
+                  fnClick={basketAdder}
                 />
                 <Button
                   buttonText="Favorit"
@@ -60,7 +72,7 @@ export default function ProductPage(): JSX.Element {
           </div>
         </div>
       </section>
-    </div>
+    </DivWrapper>
   );
 }
 

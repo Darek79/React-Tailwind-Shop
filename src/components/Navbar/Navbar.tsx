@@ -1,5 +1,6 @@
 import Logo from "./SVG/Logo/Logo";
 import NavBarItem from "./NavbarItem";
+import {Link, NavLink} from "react-router-dom";
 
 import Cart from "./SVG/Cart/Cart";
 import Hamburger from "./SVG/Hamburger/Hamburger";
@@ -36,12 +37,14 @@ export default function Navbar(): JSX.Element {
           fill="#f7fff7"
           svg_class="h-1/2"
         />
+
         <Cart
           svg_class="mx-2 h-1/2"
           fill="none"
           stroke="#f7fff7"
           strokeWidth="3"
         />
+
         <Hamburger
           class_svg_default="mx-1 h-1/2 w-6 lg:hidden"
           stroke="#f7fff7"

@@ -1,10 +1,10 @@
 import {configureStore} from "@reduxjs/toolkit";
 
-import modalReducer from "./reducers/navbarReducder";
+import basketReducer from "./reducers/basketReducder";
 
 const store = configureStore({
   reducer: {
-    modal: modalReducer,
+    basket: basketReducer,
   },
 });
 

@@ -1,4 +1,4 @@
-import {NavLink} from "react-router-dom";
+import React from "react";
 import {NavLinkI} from "./../../Interfaces/Interfaces";
 import {classes} from "./../../Utils/classesCreator";
 interface ButtonI extends NavLinkI {
@@ -7,6 +7,7 @@ interface ButtonI extends NavLinkI {
   customDivClass?: string;
   buttonClass?: string;
   buttonText?: string;
+  fnClick?: (e: React.SyntheticEvent) => void;
 }
 
 const divClass1: string =
@@ -21,9 +22,13 @@ export default function Button({
   textClass = textClass1,
   path = "",
   buttonText = "Shop",
+  fnClick,
 }: ButtonI): JSX.Element {
   return (
-    <div className={classes([divClass, customDivClass])}>
+    <div
+      onClick={fnClick}
+      className={classes([divClass, customDivClass])}
+    >
       <p className={textClass}>{buttonText}</p>
     </div>
   );
@@ -40,8 +45,3 @@ export default function Button({
 // ":hover": {
 //   backgroundColor: "#f7fff7",
 // },
-{
-  /* <NavLink to={path}>
-<p className={textClass}>{buttonText}</p>
-</NavLink> */
-}
