@@ -3,11 +3,12 @@ import {NavLinkI} from "./../../Interfaces/Interfaces";
 import {classes} from "./../../Utils/classesCreator";
 interface ButtonI extends NavLinkI {
   textClass?: string;
+  textClassCustom?: string;
   divClass?: string;
   customDivClass?: string;
   buttonClass?: string;
   buttonText?: string;
-  fnClick?: (e: React.SyntheticEvent) => void;
+  fnClick?: () => void;
 }
 
 const divClass1: string =

@@ -1,6 +1,6 @@
-import {createSlice} from "@reduxjs/toolkit";
-
-const initialState: {id: string; amount: number}[] = [];
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {BasketReducerI} from "./../../Interfaces/Interfaces";
+const initialState: BasketReducerI = [];
 
 export const Basket = createSlice({
   name: "basket",
@@ -19,9 +19,18 @@ export const Basket = createSlice({
         });
       }
     },
+    deleteItemsFromBasket(
+      state,
+      action: PayloadAction<string>
+    ) {
+      return state.filter((el) => {
+        return el.id !== action.payload;
+      });
+    },
   },
 });
 
-export const {addToBasket} = Basket.actions;
+export const {addToBasket, deleteItemsFromBasket} =
+  Basket.actions;
 
 export default Basket.reducer;

@@ -3,6 +3,12 @@ export interface CompClasses {
   other_svg_classes?: string[];
 }
 
+export interface Style {
+  styleWrapper?: string;
+  styleDefault?: string;
+  styleCustom?: string;
+}
+
 export interface SVG {
   strokeWidth?: string;
   fill?: string;
@@ -37,3 +43,5 @@ export interface ImageCardI {
   wrapperStyle?: string;
   position?: string;
 }
+
+export type BasketReducerI = {id: string; amount: number}[];
