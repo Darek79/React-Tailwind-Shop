@@ -1,6 +1,6 @@
 import Logo from "./SVG/Logo/Logo";
 import NavBarItem from "./NavbarItem";
-import {Link, NavLink} from "react-router-dom";
+
 
 import Cart from "./SVG/Cart/Cart";
 import Hamburger from "./SVG/Hamburger/Hamburger";

@@ -1,7 +1,7 @@
 import Navbar from "../Navbar/Navbar";
 import SoloCard2 from "../Cards/SoloCard/SoloCard";
 import ImageSlider from "../ImageSlider/ImageS";
-import ImageCard from "../Cards/ImageCard/ImageCard";
+
 
 export default function Test(): JSX.Element {
   return (

@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import {Style} from "../../Interfaces/Interfaces";
 
 export default function CheckoutBox({
-  styleWrapper = "fixed bottom-0 w-full border-2 p-2 z-50 block lg:hidden",
+  styleWrapper = "fixed bottom-0 w-full p-2 z-50 block lg:hidden",
   styleDefault,
   styleCustom,
 }: Style): JSX.Element {

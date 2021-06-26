@@ -1,4 +1,4 @@
-import CSS from "csstype";
+
 import Debouncer from "../../Hooks/DebouncerResize";
 import {useState, useRef, useEffect} from "react";
 import ImageCard from "../Cards/ImageCard/ImageCard";
@@ -122,14 +122,4 @@ export default function ImageS({
     </div>
   );
 }
-{
-  /* <div
-        className="flex relative overflow-x-hidden transition-all ease-in duration-150 transform-gpu"
-        style={{
-          transform: `translateX(${moved}rem)`,
-          scrollSnapType: "x mandatory",
-          scrollBehavior: "smooth",
-          width: `${products.length * params}rem`,
-        }}
-      >*/
-}
+
